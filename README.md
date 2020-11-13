@@ -26,8 +26,7 @@ One result of running the script is an image called ```output.png```. As of the 
 The JSON file ```colorPairs.json``` is formatted as such:
 ```json
 {
-    "a_b": [primary, primaryLight],
-     ...
+    "a_b": ["primary", "primaryLight"],
 }
 ```
 where for each flair:
