@@ -20,7 +20,8 @@ python run.py
 ```
 
 ## Output
-One result of running the script is an image called ```output.png```. As of the last time the script was run, it will look like like this:
+One result of running the script is an image called ```output.png```. As of the last time the script was run, it will look like this:
+
 ![Screenshot of homepage](./output.png)
 
 The JSON file ```colorPairs.json``` is formatted as such:
@@ -32,4 +33,4 @@ The JSON file ```colorPairs.json``` is formatted as such:
 where for each flair:
 - ```a``` is the vertical offset
 - ```b``` is the horizontal offset
-- ```primary``` and ```primaryLight``` are the closest colors
+- ```primary``` and ```primaryLight``` are the hex values of the closest colors
