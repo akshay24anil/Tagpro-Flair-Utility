@@ -1,6 +1,6 @@
 # Tagpro Flair Utility
 
-A Python script that produces a 3x upscaled version of [Tagpro flairs](https://tagpro.koalabeast.com/images/flair.png) as well as a JSON file that pairs each flair with its closest [Material Design color](https://material.io/design/color/the-color-system.html#tools-for-picking-colors).
+A Python script that produces a 3x upscaled version of [Tagpro flairs](https://tagpro.koalabeast.com/images/flair.png) as well as a JSON file that pairs each flair name with its position offset on the spritesheet.
 
 ## Installation
 
@@ -20,17 +20,17 @@ python run.py
 ```
 
 ## Output
-One result of running the script is an image called ```output.png```. As of the last time the script was run, it will look like this:
+One result of running the script is an image called `upscaled.png`. As of the last time the script was run, it will look like this:
 
-![Screenshot of homepage](./output.png)
+![Screenshot of homepage](./upscaled.png)
 
-The JSON file ```colorPairs.json``` is formatted as such:
+The JSON file `flairLocations.json` is formatted as such:
 ```json
 {
-    "a_b": ["primary", "primaryLight"],
+    "a": [b, c],
 }
 ```
 where for each flair:
-- ```a``` is the vertical offset
-- ```b``` is the horizontal offset
-- ```primary``` and ```primaryLight``` are the hex values of the closest colors
+- `a` is the name of the flair such as `boards.day`
+- `b` is the vertical offset in pixels
+- `c` is the horizontal offset in pixels
