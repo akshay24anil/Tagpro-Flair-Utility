@@ -10,8 +10,6 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the req
 pip install -r requirements.txt
 ```
 
-This will install [Pillow](https://pillow.readthedocs.io/en/stable/#), a library for manipulating images, and [requests](https://requests.readthedocs.io/en/master/) to send HTTP requests.
-
 ## Usage
 
 Enter the following line in your terminal to run the script.
