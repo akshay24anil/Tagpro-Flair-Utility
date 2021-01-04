@@ -36,8 +36,9 @@ def getAllFlairs():
     result = dict()
     # Find the tab containing all flairs.
     all_flairs = soup.find('div', {'id':'all-flair'})
-    # FLair names and offsets can be found in the span elements.
-    for span in all_flairs.findAll('span'):
+    # Flair names and offsets can be found in the span elements.
+    for div in all_flairs.findAll('li'):
+        span = div.find('span')
         # Replace hyphens with periods to stick to flair names elsewhere.
         name = span['class'][1].replace('-','.')
         # Regular expression to extract only digits and '-'s from offsets.
@@ -47,7 +48,11 @@ def getAllFlairs():
         # Perform regex matching and store their results as integers.
         offset[0] = int(digit_filter.sub('', offset[0]))
         offset[1] = int(digit_filter.sub('', offset[1]))
-        result[name] = offset
+        result[name] = dict()
+        result[name]['offset'] = offset
+        # Extract flair description.
+        description = div.find('div', {'class':'flair-description'}).getText().strip()
+        result[name]['description'] = description
     return result
 
 def main():
